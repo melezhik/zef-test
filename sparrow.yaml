@@ -1,0 +1,27 @@
+image:
+  - melezhik/sparrow:debian
+tasks:
+  -
+    name: main
+    default: true
+    language: Bash
+    config:
+      version: 2022.12
+    code: |
+      set -e
+      echo "Linux version: $os"
+      
+      curl -sL https://rakudo.org/dl/rakudo/rakudo-moar-$version-01-linux-x86_64-gcc.tar.gz \
+      -o rakudo-moar-$version-01-linux-x86_64-gcc.tar.gz
+      
+      tar -xzf rakudo-moar-$version-01-linux-x86_64-gcc.tar.gz          
+      
+      eval "$(rakudo-moar-$version-01-linux-x86_64-gcc/scripts/set-env.sh --quiet)"
+      
+      which raku
+      which zef
+      
+      raku --version
+      zef --version
+      
+      zef install "Time::Duration:ver<2.00>" --to=home 
