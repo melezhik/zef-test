@@ -11,6 +11,8 @@ tasks:
       set -e
       echo "Linux version: $os"
       
+      version=$(config version)
+      
       curl -sL https://rakudo.org/dl/rakudo/rakudo-moar-$version-01-linux-x86_64-gcc.tar.gz \
       -o rakudo-moar-$version-01-linux-x86_64-gcc.tar.gz
       
