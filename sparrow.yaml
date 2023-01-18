@@ -25,5 +25,10 @@ tasks:
       
       raku --version
       zef --version
+
+      sudo apt-get install -y libarchive libcurl-dev
       
-      zef --debug install "Time::Duration:ver<2.00>"
+      zef install "Pakku:ver<ava-1>" --to=home --/test
+      
+      pakku add notest "Time::Duration:ver<2.00>"
+      # zef --debug install "Time::Duration:ver<2.00>"
