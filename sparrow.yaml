@@ -32,6 +32,6 @@ tasks:
       
       zef install "Pakku:ver<ava-1>" --to=home --/test
       
-      pakku add notest verbose 1 "Time::Duration:ver<2.00>"
+      pakku add notest verbose debug "Time::Duration:ver<2.00>"
       
       #zef --debug install "Time::Duration:ver<2.00>"
