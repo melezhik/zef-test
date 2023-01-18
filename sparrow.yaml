@@ -24,4 +24,4 @@ tasks:
       raku --version
       zef --version
       
-      zef install "Time::Duration:ver<2.00>" --to=home 
+      zef install "Time::Duration:ver<2.00>" --to=home --debug
